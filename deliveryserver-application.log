@@ -1,0 +1,26 @@
+INFO  [2019-02-19 16:41:35,563] [] [main] io.dropwizard.server.DefaultServerFactory:configure:182 Registering jersey handler with root path prefix: / 
+INFO  [2019-02-19 16:41:35,567] [] [main] io.dropwizard.server.DefaultServerFactory:configure:185 Registering admin handler with root path prefix: / 
+INFO  [2019-02-19 16:41:37,757] [] [main] com.sentienz.DataGenerator.DataGen:run:31 Inserted 1records 
+INFO  [2019-02-19 16:41:37,760] [] [main] io.dropwizard.server.ServerFactory:printBanner:638 Starting DataGen 
+INFO  [2019-02-19 16:41:37,895] [] [main] org.eclipse.jetty.setuid.SetUIDListener:lifeCycleStarting:201 Opened application@7ba93755{HTTP/1.1,[http/1.1]}{0.0.0.0:8443} 
+INFO  [2019-02-19 16:41:37,895] [] [main] org.eclipse.jetty.setuid.SetUIDListener:lifeCycleStarting:201 Opened admin@22dc59b2{HTTP/1.1,[http/1.1]}{0.0.0.0:8444} 
+INFO  [2019-02-19 16:41:37,898] [] [main] org.eclipse.jetty.server.Server:doStart:374 jetty-9.4.11.v20180605; built: 2018-06-05T18:24:03.829Z; git: d5fc0523cfa96bfebfbda19606cad384d772f04c; jvm 1.8.0_162-b12 
+INFO  [2019-02-19 16:41:38,412] [] [main] io.dropwizard.jersey.DropwizardResourceConfig:logComponents:86 The following paths were found for the configured resources:
+
+    NONE
+ 
+INFO  [2019-02-19 16:41:38,414] [] [main] org.eclipse.jetty.server.handler.ContextHandler:doStart:851 Started i.d.j.MutableServletContextHandler@9408857{/,null,AVAILABLE} 
+INFO  [2019-02-19 16:41:38,418] [] [main] io.dropwizard.setup.AdminEnvironment:logTasks:73 tasks = 
+
+    POST    /tasks/log-level (io.dropwizard.servlets.tasks.LogConfigurationTask)
+    POST    /tasks/gc (io.dropwizard.servlets.tasks.GarbageCollectionTask)
+ 
+INFO  [2019-02-19 16:41:38,422] [] [main] org.eclipse.jetty.server.handler.ContextHandler:doStart:851 Started i.d.j.MutableServletContextHandler@53016b11{/,null,AVAILABLE} 
+INFO  [2019-02-19 16:41:38,433] [] [main] org.eclipse.jetty.server.AbstractConnector:doStart:289 Started application@7ba93755{HTTP/1.1,[http/1.1]}{0.0.0.0:8443} 
+INFO  [2019-02-19 16:41:38,434] [] [main] org.eclipse.jetty.server.AbstractConnector:doStart:289 Started admin@22dc59b2{HTTP/1.1,[http/1.1]}{0.0.0.0:8444} 
+INFO  [2019-02-19 16:41:38,434] [] [main] org.eclipse.jetty.server.Server:doStart:411 Started @4435ms 
+INFO  [2019-02-19 16:41:41,842] [] [Thread-4] com.sentienz.DataGenerator.DataGen:run:46 Running Shutdown Hook 
+INFO  [2019-02-19 16:41:41,858] [] [Thread-14] org.eclipse.jetty.server.AbstractConnector:doStop:332 Stopped application@7ba93755{HTTP/1.1,[http/1.1]}{0.0.0.0:8443} 
+INFO  [2019-02-19 16:41:41,860] [] [Thread-14] org.eclipse.jetty.server.AbstractConnector:doStop:332 Stopped admin@22dc59b2{HTTP/1.1,[http/1.1]}{0.0.0.0:8444} 
+INFO  [2019-02-19 16:41:41,866] [] [Thread-14] org.eclipse.jetty.server.handler.ContextHandler:doStop:1020 Stopped i.d.j.MutableServletContextHandler@53016b11{/,null,UNAVAILABLE} 
+INFO  [2019-02-19 16:41:41,876] [] [Thread-14] org.eclipse.jetty.server.handler.ContextHandler:doStop:1020 Stopped i.d.j.MutableServletContextHandler@9408857{/,null,UNAVAILABLE} 

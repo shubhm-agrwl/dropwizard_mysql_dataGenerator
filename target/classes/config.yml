@@ -1,0 +1,44 @@
+server:
+  applicationConnectors:
+  - type: http
+    port: 8443
+  adminConnectors:
+  - type: http
+    port: 8444
+    
+counter: 1
+
+prefix: DG_1
+    
+# Database settings.
+dataSourceFactory:
+  driverClass: com.mysql.jdbc.Driver
+  # driverClass: org.apache.ignite.IgniteJdbcThinDriver
+  user: root
+  password: 1234
+  url: jdbc:mysql://127.0.0.1:3306/datagen?autoReconnect=true&useUnicode=true&characterEncoding=UTF-8
+  # url: jdbc:ignite:thin://localhost:10800?distributedJoins=true
+  properties:
+    charSet: UTF-8
+  maxWaitForConnection: 1s
+  validationQuery: "/* MyService Health Check */ SELECT 1"
+  minSize: 8
+  maxSize: 32
+  checkConnectionWhileIdle: false
+  evictionInterval: 10s
+  minIdleTime: 1 minute
+  checkConnectionOnBorrow: true
+         
+logging:
+  loggers:
+    "com.sentienz": DEBUG
+  appenders:
+  - type: console
+  - type: file
+    threshold: INFO
+    includeCallerData: true
+    logFormat: '%-5level [%date{ISO8601}] [%X{PID}] [%t] %c:%method:%line %msg %n'
+    currentLogFilename: deliveryserver-application.log
+    archivedLogFilenamePattern: deliveryserver-application-%d{yyyy-MM-dd}-%i.log.gz
+    archivedFileCount: 7
+    maxFileSize: 10MB
